@@ -1,0 +1,22 @@
+'''
+Write a program that takes a string
+a. a=”Special cases aren't special enough to break the rules.”
+b. a=”Python was created in the early 1990s by Guido van Rossum at Stichting Mathematisch Centrum in the Netherlands as a successor of a language called ABC. Guido remains Python’s principal author, although it includes many contributions from others.”
+        and returns the same string, except with the words in backwards order.
+'''
+
+l=list(a)
+d=0
+b=0
+c=''
+e=''
+for i in l:
+    while d<len(l):
+        c=c+e
+        if i!=' ' and i!='.':
+            d+=1
+        else:
+            e=l[b:d:-1]+l[d]
+            b=d+1
+            d+=1
+''.join(c)
